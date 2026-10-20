@@ -11,4 +11,8 @@ const employees = [
   { id: 10, name: "Gwen Grollmann" },
 ];
 
+export function getEmployees() {
+  return employees;
+}
+
 export default employees;

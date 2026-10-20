@@ -1,5 +1,5 @@
 import express from "express";
-import employees from "#db/employees";
+import employees, { getEmployees } from "#db/employees";
 
 const app = express();
 
@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/employees", (req, res) => {
+  const employees = getEmployees();
   res.send(employees);
 });
 
