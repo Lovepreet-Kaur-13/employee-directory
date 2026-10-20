@@ -20,4 +20,9 @@ export function getEmployeeById(id) {
   return employeeExists;
 }
 
+export function getRandomEmployee() {
+  const randomIndex = Math.floor(Math.random() * employees.length);
+  return employees[randomIndex];
+}
+
 export default employees;
