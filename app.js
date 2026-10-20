@@ -8,7 +8,7 @@ import employees, {
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("Hello employess!");
+  res.send("Hello employees!");
 });
 
 app.get("/employees", (req, res) => {
@@ -25,7 +25,7 @@ app.get("/employees/:id", (req, res) => {
   const { id } = req.params;
   const employeeExists = getEmployeeById(+id);
   if (!employeeExists) {
-    return res.status(400).send("employee not exist with this id");
+    return res.status(404).send("employee not exist with this id");
   }
   res.send(employeeExists);
 });
