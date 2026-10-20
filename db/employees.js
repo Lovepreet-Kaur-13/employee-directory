@@ -15,4 +15,9 @@ export function getEmployees() {
   return employees;
 }
 
+export function getEmployeeById(id) {
+  const employeeExists = employees.find((employee) => employee.id === id);
+  return employeeExists;
+}
+
 export default employees;
